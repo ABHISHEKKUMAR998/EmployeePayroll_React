@@ -80,6 +80,18 @@
       "salary": "43400",
       "startDate": "2021-06-14T18:30:00.000Z",
       "note": "Hello"
+    },
+    {
+      "id": 7,
+      "name": "Anand Kumar",
+      "profilePicture": "../../assets/profile-images/Ellipse -3.png",
+      "gender": "male",
+      "departments": [
+        "HR"
+      ],
+      "salary": "43000",
+      "startDate": "2021-06-19T18:30:00.000Z",
+      "note": "Hello"
     }
   ]
 }

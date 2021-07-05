@@ -6,11 +6,12 @@
       "profilePicture": "../../assets/profile-images/Ellipse -5.png",
       "gender": "male",
       "departments": [
-        "Engineer"
+        "Engineer",
+        "HR"
       ],
-      "salary": "43400",
-      "startDate": "2021-06-14T18:30:00.000Z",
-      "note": "Hello"
+      "salary": "47200",
+      "startDate": "2021-07-02T18:30:00.000Z",
+      "note": "Hello People"
     },
     {
       "id": 7,
@@ -107,6 +108,42 @@
       "salary": "46700",
       "startDate": "2021-06-30T18:30:00.000Z",
       "note": "Nikhil"
+    },
+    {
+      "id": 15,
+      "name": "Venkat",
+      "profilePicture": "../../assets/profile-images/Ellipse -3.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "44900",
+      "startDate": "2021-06-30T18:30:00.000Z",
+      "note": "Hello venkat"
+    },
+    {
+      "id": 16,
+      "name": "Mohit",
+      "profilePicture": "../../assets/profile-images/Ellipse -3.png",
+      "gender": "male",
+      "departments": [
+        "HR"
+      ],
+      "salary": 40000,
+      "startDate": "2021-06-30T18:30:00.000Z",
+      "note": "I am Mohit"
+    },
+    {
+      "id": 17,
+      "name": "Anikesh",
+      "profilePicture": "../../assets/profile-images/Ellipse -3.png",
+      "gender": "male",
+      "departments": [
+        "HR"
+      ],
+      "salary": "41100",
+      "startDate": "2021-06-18T18:30:00.000Z",
+      "note": "i am mad"
     }
   ]
 }

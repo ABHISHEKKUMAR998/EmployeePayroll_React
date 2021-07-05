@@ -50,18 +50,6 @@
       "note": "Hi I am Manoj"
     },
     {
-      "id": 10,
-      "name": "Mike",
-      "profilePicture": "../../assets/profile-images/Ellipse -5.png",
-      "gender": "male",
-      "departments": [
-        "Engineer"
-      ],
-      "salary": "36900",
-      "startDate": "2021-06-11T18:30:00.000Z",
-      "note": "i am mike"
-    },
-    {
       "id": 11,
       "name": "Sakshi",
       "profilePicture": "../../assets/profile-images/Ellipse -4.png",

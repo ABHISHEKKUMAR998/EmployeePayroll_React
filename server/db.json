@@ -132,6 +132,18 @@
       "salary": "41100",
       "startDate": "2021-06-18T18:30:00.000Z",
       "note": "i am mad"
+    },
+    {
+      "id": 18,
+      "name": "Amit",
+      "profilePicture": "../../assets/profile-images/Ellipse -5.png",
+      "gender": "male",
+      "departments": [
+        "HR"
+      ],
+      "salary": "50000",
+      "startDate": "2021-07-02T18:30:00.000Z",
+      "notes": "i am amit"
     }
   ]
 }

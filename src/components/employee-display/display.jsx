@@ -43,8 +43,8 @@ const Display = (props) => {
             <th>Actions</th>
         </tr>
         {
-            props.employeeArray && props.employeeArray.map((employee) => (
-              <tr key={employee.id}>
+           props.employeeArray && props.employeeArray.map((employee, ind) => (
+            <tr key={ind}>
                   <td><img src={handleProfilePicture(employee.profilePicture)} alt="" /></td>
                   <td>{employee.name}</td>
                   <td>{employee.gender}</td>

@@ -29,6 +29,8 @@ const Display = (props) => {
       })
     } 
   }
+
+  
   return (
     <table id="display" className="table">
       <tbody>

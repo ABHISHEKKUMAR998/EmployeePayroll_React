@@ -24,6 +24,8 @@ class HomePage extends React.Component {
     this.getEmployeeList();
   }
 
+  
+
   search = async (event) => {
     let searchName = event.target.value;
     await this.setState({employeeArray: this.state.allEmployeeArray});
@@ -33,6 +35,8 @@ class HomePage extends React.Component {
           employee.name.toLowerCase().indexOf(searchName.toLowerCase()) > -1 );
     this.setState({ employeeArray: employeeList });
   }
+
+
 
   getEmployeeList = () => {
     this.employeeService.getAllEmployees()

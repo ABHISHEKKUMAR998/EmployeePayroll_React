@@ -42,6 +42,8 @@ const initialState = {
     startDate: ''
   }
 }
+
+
 class PayrollForm extends React.Component {
   constructor(props) {
     super(props)

@@ -105,7 +105,7 @@ class PayrollForm extends React.Component {
     let dateArray = new UtilityService().stringifyDate(employee.startDate).split(" ");
     let employeeDay = (dateArray[0].length === 1) ? '0' + dateArray[0] : dateArray[0];
     this.setState({
-      id: employee.id,
+      id: employee.employeeId,
       name: employee.name,
       profilePicture: employee.profilePicture,
       gender: employee.gender,
@@ -132,7 +132,7 @@ class PayrollForm extends React.Component {
     this.checkGender(event.target.value);
   }
   departmentChangeHandler = async (event) => {
-    {if(event.target.checked) {
+    if(event.target.checked) {
       await this.setState({departments: this.state.departments.concat(event.target.value)});
     }
     if (!event.target.checked) {
@@ -145,7 +145,7 @@ class PayrollForm extends React.Component {
       }
       array.splice(index, 1);
       await this.setState({ departments: array });
-    }}
+    }
     this.checkDepartment(this.state.departments);
   }
   salaryChangeHandler = (event) => {
@@ -248,28 +248,26 @@ class PayrollForm extends React.Component {
     await this.checkDepartment(this.state.departments);
     await this.checkGender(this.state.gender);
     await this.checkGlobalError();
+    // console.log(this.state.isError);
     return (this.state.isError);
   }
   save =  async (event) => {
+    console.log("hello");
     event.preventDefault();
     event.stopPropagation();
-    saveOperation: {         
-      if(await this.checkValidations()) {
-        let errorLog = JSON.stringify(this.state.error);
     
-        break saveOperation;
-      }
-     // alert("Form Submitted Successfully!!!\n"+`${this.state.name} ${this.state.gender} ${this.state.profilePicture} ${this.state.departments} ${this.state.salary} ${this.state.startDate} ${this.state.notes}`);
+      alert("Form Submitted Successfully!!!\n" + `${this.state.name} ${this.state.gender} ${this.state.profilePicture} ${this.state.departments} ${this.state.salary} ${this.state.startDate} ${this.state.notes}`);
       let employeeObject = {
         id: this.state.id,
         name: this.state.name,
-        profilePicture: this.state.profilePicture,
+        profilePic: this.state.profilePicture,
         gender: this.state.gender,
         departments: this.state.departments,
         salary: this.state.salary,
         startDate: this.state.startDate,
         notes: this.state.notes
       }
+    
       if(this.state.isUpdate) {
         new EmployeeService().updateEmployee(employeeObject)
         .then(responseText => {
@@ -280,18 +278,18 @@ class PayrollForm extends React.Component {
           console.log("Error while updating Employee!!!\n" + JSON.stringify(error));
         })
       } else {
+        console.log(employeeObject);
         new EmployeeService().addEmployee(employeeObject)
         .then(responseText => {
           alert("Employee Added Successfully!!!\n" + JSON.stringify(responseText.data));
           this.reset();
           this.props.history.push("/home");
         }).catch(error => {
-          console.log("Error while adding Employee!!!\n" + JSON.stringify(error));
+          console.log( error);
         })
       }
       this.reset();
     }
-  }
   reset = () => {
     this.setState({...initialState});
   }
@@ -369,7 +367,7 @@ class PayrollForm extends React.Component {
               <error-output className="gender-error" htmlFor="gender">{this.state.error.gender}</error-output>
             </div>
             <div className="row-content">
-              <label className="label text" htmlFor="department">Department</label>
+              <label className="label text" htmlFor="departments">Department</label>
               <div>
                 {this.state.allDepartments.map(item => (
                   <span key={item}>
@@ -381,8 +379,8 @@ class PayrollForm extends React.Component {
                   </span>
                 ))}
               </div>
-              <valid-message className="valid-department" htmlFor="department">{this.state.valid.department}</valid-message>
-              <error-output className="department-error" htmlFor="department">{this.state.error.department}</error-output>
+              <valid-message className="valid-department" htmlFor="departments">{this.state.valid.department}</valid-message>
+              <error-output className="department-error" htmlFor="departments">{this.state.error.department}</error-output>
             </div>
             <div className="row-content">
               <label className="label text" htmlFor="salary">Salary</label>

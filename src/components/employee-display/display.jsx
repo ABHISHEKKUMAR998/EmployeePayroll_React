@@ -25,7 +25,7 @@ const Display = (props) => {
         window.location.reload();
       }).catch(error => {
         alert("Error occurred while deleting the Employee!!!");
-        console("Delete Error : " + JSON.stringify(error));
+        console.log("Delete Error : " + JSON.stringify(error));
       })
     } 
   }
@@ -45,14 +45,14 @@ const Display = (props) => {
         {
            props.employeeArray && props.employeeArray.map((employee, ind) => (
             <tr key={ind}>
-                  <td><img src={handleProfilePicture(employee.profilePicture)} alt="" /></td>
+                  <td><img src={handleProfilePicture(employee.profilePic)} alt="img" /></td>
                   <td>{employee.name}</td>
                   <td>{employee.gender}</td>
                   <td>{employee.departments && employee.departments.map(dept => (<div className="dept-label">{dept}</div>))}</td>
                   <td> ₹ {employee.salary}</td>
                   <td>{new UtilityService().stringifyDate(employee.startDate)}</td>
-                  <td><img src={deleteIcon} onClick={() => remove(employee.id)} alt="delete" />
-                      <img src={editIcon} onClick={() => edit(employee.id)} alt="edit" /></td>
+                  <td><img src={deleteIcon} onClick={() => remove(employee.employeeId)} alt="delete" />
+                      <img src={editIcon} onClick={() => edit(employee.employeeId)} alt="edit" /></td>
               </tr>
             ))
           }
@@ -67,6 +67,7 @@ const profiles = ["../../assets/profile-images/Ellipse -3.png", "../../assets/pr
                   "../../assets/profile-images/Ellipse -2.png", "../../assets/profile-images/Ellipse -1.png"];
 const handleProfilePicture = (profilePicturePath) => {
   let index;
+  console.log(profilePicturePath);
   for( let i = 0; i < profiles.length; i++) {
     if(profiles[i] === profilePicturePath) {
       index = i;

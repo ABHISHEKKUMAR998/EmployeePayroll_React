@@ -62,18 +62,6 @@
       "note": "i am sakshi"
     },
     {
-      "id": 12,
-      "name": "Mitesh",
-      "profilePicture": "../../assets/profile-images/Ellipse -2.png",
-      "gender": "male",
-      "departments": [
-        "HR"
-      ],
-      "salary": 40000,
-      "startDate": "2021-06-30T18:30:00.000Z",
-      "note": "I am Mitesh"
-    },
-    {
       "id": 13,
       "name": "Akhil",
       "profilePicture": "../../assets/profile-images/Ellipse -3.png",
@@ -144,6 +132,30 @@
       "salary": "50000",
       "startDate": "2021-07-02T18:30:00.000Z",
       "notes": "i am amit"
+    },
+    {
+      "id": 19,
+      "name": "Nitu",
+      "profilePicture": "../../assets/profile-images/Ellipse -4.png",
+      "gender": "female",
+      "departments": [
+        "Sales"
+      ],
+      "salary": "45200",
+      "startDate": "2021-06-22T18:30:00.000Z",
+      "notes": "i am nitu"
+    },
+    {
+      "id": 20,
+      "name": "Ansu",
+      "profilePicture": "../../assets/profile-images/Ellipse -2.png",
+      "gender": "male",
+      "departments": [
+        "HR"
+      ],
+      "salary": "44500",
+      "startDate": "2021-06-30T18:30:00.000Z",
+      "notes": "anshu"
     }
   ]
 }
